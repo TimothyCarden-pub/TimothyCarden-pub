@@ -29,13 +29,6 @@
 
 [![wakatime](https://wakatime.com/badge/github/CHUBSxMQ9/TimCarden.svg)](https://wakatime.com/badge/github/CHUBSxMQ9/TimCarden)
 
-**Breakdown by project:**
-
-DevOps_Tasks
-
-[![wakatime](https://wakatime.com/badge/user/2bca1f5c-e2e1-4e28-95d0-a0ef2f6d2471/project/69474e9c-8f95-4642-b9b1-ae4288db0960.svg)](https://wakatime.com/badge/user/2bca1f5c-e2e1-4e28-95d0-a0ef2f6d2471/project/69474e9c-8f95-4642-b9b1-ae4288db0960)
-
-
 📈 my github stats
 
 [![TCarden's GitHub stats](https://github-readme-stats.vercel.app/api?username=CHUBSxMQ9&show_icons=true&theme=radical)](https://github.com/CHUBSxMQ9/github-readme-stats)
