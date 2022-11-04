@@ -1,16 +1,41 @@
-### Hi there 👋
+# [Timothy Carden](https://www.linkedin.com/in/timothy-carden-52328a8/)
 
-<!--
-**CHUBSxMQ9/CHUBSxMQ9** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+<a href="https://www.linkedin.com/in/timothy-carden-52328a8/">
+  <img align="left" alt="Timothy Cardens's LinkedIN" width="22px" src="https://raw.githubusercontent.com/peterthehan/peterthehan/master/assets/linkedin.svg" />
+</a>
 
-Here are some ideas to get you started:
+![](https://visitor-badge.glitch.me/badge?page_id=timothycarden.timothycarden)
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+ I am a diligent, self-driven DevOps Engineer with experience in designing, building, documenting, supporting, automating, and optimizing infrastructure and deployments in AWS, Azure, Kubernetes, Terraform and more; pursuing a challenging yet rewarding remote opportunity with career progression into Mid to Sr. DevOps engineer within the first 1 to 3 years.
+
+<br />
+
+**languages and tools:**  
+<code><img height="30" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/bash/bash.png"></code>
+<code><img height="30" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png"></code>
+<code><img height="30" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/terraform/terraform.png"></code>
+<code><img height="30" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/nodejs/nodejs.png"></code>
+<code><img height="30" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/python/python.png"></code>
+<code><img height="30" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/mysql/mysql.png"></code>
+<code><img height="30" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/git/git.png"></code>
+<code><img height="30" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/kubernetes/kubernetes.png"></code>
+
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=CHUBSxMQ9&langs_count=8&hide=html.css)](https://github.com/CHUBSxMQ9/github-readme-stats)
+
+📊 **Weekly project time:**
+
+<!--START_SECTION:waka-->
+<!--END_SECTION:waka-->
+
+[![wakatime](https://wakatime.com/badge/github/CHUBSxMQ9/TimCarden.svg)](https://wakatime.com/badge/github/CHUBSxMQ9/TimCarden)
+
+**Breakdown by project:**
+
+DevOps_Tasks
+
+[![wakatime](https://wakatime.com/badge/user/2bca1f5c-e2e1-4e28-95d0-a0ef2f6d2471/project/69474e9c-8f95-4642-b9b1-ae4288db0960.svg)](https://wakatime.com/badge/user/2bca1f5c-e2e1-4e28-95d0-a0ef2f6d2471/project/69474e9c-8f95-4642-b9b1-ae4288db0960)
+
+
+📈 my github stats
+
+[![TCarden's GitHub stats](https://github-readme-stats.vercel.app/api?username=CHUBSxMQ9&show_icons=true&theme=radical)](https://github.com/CHUBSxMQ9/github-readme-stats)
