@@ -41,8 +41,6 @@ Other      2 mins          -------------------------   01.34 %
 
 <!--END_SECTION:waka-->
 
-[![wakatime](https://wakatime.com/badge/github/CHUBSxMQ9/TimCarden.svg)](https://wakatime.com/badge/github/CHUBSxMQ9/TimCarden)
-
 📈 my github stats
 
 [![TCarden's GitHub stats](https://github-readme-stats.vercel.app/api?username=CHUBSxMQ9&show_icons=true&theme=radical)](https://github.com/CHUBSxMQ9/github-readme-stats)
