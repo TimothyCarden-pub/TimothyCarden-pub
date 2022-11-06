@@ -27,16 +27,16 @@
 <!--START_SECTION:waka-->
 
 ```text
-From: 26 October 2022 - To: 04 November 2022
+From: 26 October 2022 - To: 05 November 2022
 
-Total Time: 4 hrs
+Total Time: 4 hrs 32 mins
 
-Markdown    2 hrs 24 mins   >>>>>>>>>>>>>>>----------   60.24 %
-YAML        46 mins         >>>>>--------------------   19.57 %
-Bash        18 mins         >>-----------------------   07.52 %
-Docker      11 mins         >------------------------   04.99 %
-Python      11 mins         >------------------------   04.71 %
-Terraform   4 mins          -------------------------   01.94 %
+Markdown    2 hrs 28 mins   >>>>>>>>>>>>>>-----------   54.67 %
+YAML        46 mins         >>>>---------------------   17.26 %
+Terraform   31 mins         >>>----------------------   11.43 %
+Bash        18 mins         >>-----------------------   06.64 %
+Docker      11 mins         >------------------------   04.40 %
+Python      11 mins         >------------------------   04.18 %
 ```
 
 <!--END_SECTION:waka-->
