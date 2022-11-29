@@ -1,0 +1,37 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: thoughts-timcarden
+  namespace: tcarden
+  labels:
+    app: thooughts-timcarden
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: thoughts-timcarden
+  template: 
+    metadata:
+      labels:
+        app: thoughts-timcarden
+    spec:
+      containers:
+      - name: thoughts-timcarden
+        image: tcarden25/thoughts:v1.0.1
+        ports:
+        - containerPort: 8000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: tcarden
+  name: thoughts-timcarden
+spec:
+  selector:
+    app: thoughts-timcarden
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8000
+  type: LoadBalancer

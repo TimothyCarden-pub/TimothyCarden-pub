@@ -1,0 +1,6 @@
+{
+    "yaml.schemas": {
+        "kubernetes": "*.yaml",
+        "kubernetes://schema/apps/v1%40deployment": "file:///c%3A/Users/Timca/CHUBSxMQ9/Django_Login/django_auth/kubernetes_manifest.yaml"
+    }
+}
