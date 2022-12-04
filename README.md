@@ -27,16 +27,16 @@
 <!--START_SECTION:waka-->
 
 ```text
-From: 26 October 2022 - To: 01 December 2022
+From: 26 October 2022 - To: 02 December 2022
 
-Total Time: 21 hrs 13 mins
+Total Time: 24 hrs 10 mins
 
-Python       7 hrs 48 mins   >>>>>>>>>----------------   36.75 %
-YAML         4 hrs 41 mins   >>>>>>-------------------   22.12 %
-Markdown     2 hrs 41 mins   >>>----------------------   12.68 %
-JavaScript   1 hr 28 mins    >>-----------------------   06.97 %
-HTML         1 hr 9 mins     >------------------------   05.42 %
-Other        57 mins         >------------------------   04.48 %
+Python       9 hrs 50 mins   >>>>>>>>>>---------------   40.74 %
+YAML         5 hrs 31 mins   >>>>>>-------------------   22.89 %
+Markdown     2 hrs 41 mins   >>>----------------------   11.14 %
+JavaScript   1 hr 28 mins    >>-----------------------   06.12 %
+HTML         1 hr 11 mins    >------------------------   04.90 %
+Other        57 mins         >------------------------   03.94 %
 ```
 
 <!--END_SECTION:waka-->
