@@ -26,15 +26,16 @@
 
 <!--START_SECTION:waka-->
 
-```text
-From: 26 October 2022 - To: 01 May 2023
+```txt
+From: 26 October 2022 - To: 04 July 2023
 
-Total Time: 46 hrs 54 mins
+Total Time: 47 hrs 11 mins
 
-Python       15 hrs 55 mins  >>>>>>>>-----------------   33.97 %
-YAML         14 hrs 26 mins  >>>>>>>>-----------------   30.79 %
-Terraform    3 hrs 34 mins   >>-----------------------   07.64 %
-Other        3 hrs 32 mins   >>-----------------------   07.54 %
+Python       16 hrs          >>>>>>>>-----------------   33.91 %
+YAML         14 hrs 26 mins  >>>>>>>>-----------------   30.59 %
+Terraform    3 hrs 34 mins   >>-----------------------   07.59 %
+Other        3 hrs 32 mins   >>-----------------------   07.50 %
+Markdown     2 hrs 43 mins   >------------------------   05.76 %
 ```
 
 <!--END_SECTION:waka-->
