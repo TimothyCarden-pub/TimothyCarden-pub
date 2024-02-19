@@ -40,4 +40,4 @@ Markdown     2 hrs 44 mins   >------------------------   05.76 %
 
 📈 my github stats
 
-[![TCarden's GitHub stats](https://github-readme-stats.vercel.app/api?username=CHUBSxMQ9&show_icons=true&theme=radical)](https://github.com/CHUBSxMQ9/github-readme-stats)
+[![TCarden's GitHub stats](https://github-readme-stats.vercel.app/api?username=TimothyCarden-pub&show_icons=true&theme=radical)](https://github.com/TimothyCarden-pub/github-readme-stats)
