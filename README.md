@@ -1,8 +1,5 @@
 # [Timothy Carden](https://www.linkedin.com/in/timothy-carden-52328a8/)
 
-<a href="https://www.linkedin.com/in/timothy-carden-52328a8/">
-  <img align="left" alt="Timothy Cardens's LinkedIN" width="22px" src="https://raw.githubusercontent.com/peterthehan/peterthehan/master/assets/linkedin.svg" />
-</a>
 
 ![](https://visitor-badge.glitch.me/badge?page_id=timothycarden.timothycarden)
 
