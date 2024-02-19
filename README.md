@@ -6,6 +6,7 @@
 
 ![](https://visitor-badge.glitch.me/badge?page_id=timothycarden.timothycarden)
 
+ 
  I am a diligent, self-driven DevOps Engineer with experience in designing, building, documenting, supporting, automating, and optimizing infrastructure and deployments in AWS, Azure, Kubernetes, Terraform and more; pursuing a challenging yet rewarding remote opportunity with career progression into Mid to Sr. DevOps engineer within the first 1 to 3 years.
 
 <br />
