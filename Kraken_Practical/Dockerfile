@@ -1,5 +1,5 @@
-# Use a minimal base image
-FROM golang:1.16-alpine AS builder
+# Use a minimal base image with Go 1.20 installed
+FROM golang:1.20-alpine AS builder
 
 # Set up non-root user
 RUN adduser -D -g '' appuser
@@ -15,6 +15,9 @@ RUN git clone --branch v14.2.0 --single-branch https://github.com/cosmos/gaia.gi
 
 # Change working directory to Gaia
 WORKDIR /home/appuser/gaia
+
+# Download missing go.sum entries
+RUN go mod download
 
 # Build the Gaia binary
 RUN make install
