@@ -1,5 +1,5 @@
-# Use a minimal base image with Go 1.20 installed
-FROM golang:1.20-alpine AS builder
+# Use a base image with Go and necessary build tools
+FROM golang:1.20 AS builder
 
 # Set up non-root user
 RUN adduser -D -g '' appuser
@@ -8,16 +8,13 @@ RUN adduser -D -g '' appuser
 WORKDIR /home/appuser
 
 # Install necessary dependencies
-RUN apk add --no-cache git build-base
+RUN apt-get update && apt-get install -y libusb-dev
 
 # Clone the Gaia repository and checkout the desired version
 RUN git clone --branch v14.2.0 --single-branch https://github.com/cosmos/gaia.git
 
 # Change working directory to Gaia
 WORKDIR /home/appuser/gaia
-
-# Download missing go.sum entries
-RUN go mod download
 
 # Build the Gaia binary
 RUN make install
