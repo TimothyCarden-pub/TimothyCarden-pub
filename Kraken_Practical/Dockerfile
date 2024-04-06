@@ -1,39 +1,30 @@
-# Use a base image with Go and necessary build tools
-FROM golang:1.20 AS builder
+# Use a base image with necessary dependencies (Ubuntu in this case)
+FROM ubuntu:20.04
 
-# Set up non-root user
-RUN adduser -D -g '' appuser
-
-# Set working directory
-WORKDIR /home/appuser
+# Set environment variables
+ENV GOPATH /go
+ENV PATH $GOPATH/bin:/usr/local/go/bin:$PATH
 
 # Install necessary dependencies
-RUN apt-get update && apt-get install -y libusb-dev
+RUN apt-get update && apt-get install -y \
+    wget \
+    git \
+    build-essential \
+    curl
 
-# Clone the Gaia repository and checkout the desired version
-RUN git clone --branch v14.2.0 --single-branch https://github.com/cosmos/gaia.git
+# Install Go
+RUN wget https://golang.org/dl/go1.17.6.linux-amd64.tar.gz && \
+    tar -C /usr/local -xzf go1.17.6.linux-amd64.tar.gz
 
-# Change working directory to Gaia
-WORKDIR /home/appuser/gaia
+# Clone Gaia repository
+RUN git clone --branch v14.2.0 https://github.com/cosmos/gaia.git $GOPATH/src/github.com/cosmos/gaia
 
-# Build the Gaia binary
+# Build Gaia
+WORKDIR $GOPATH/src/github.com/cosmos/gaia
 RUN make install
 
-# Start a new stage from a minimal base image
-FROM alpine:latest
+# Expose ports
+EXPOSE 26656 26657 26660
 
-# Set up non-root user
-RUN adduser -D -g '' appuser
-
-# Copy the compiled binary from the previous stage
-COPY --from=builder /home/appuser/go/bin/gaiad /usr/local/bin/
-COPY --from=builder /home/appuser/go/bin/gaiacli /usr/local/bin/
-
-# Set permissions for the binaries
-RUN chmod +x /usr/local/bin/gaiad /usr/local/bin/gaiacli
-
-# Expose necessary ports
-EXPOSE 26656 26657 1317
-
-# Set up entry point to run the gaiad daemon and print its output
-ENTRYPOINT ["gaiad", "start", "--log_level", "info"]
+# Configure and start Gaia
+CMD ["gaiad", "start"]
