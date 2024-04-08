@@ -22,8 +22,11 @@ RUN ls -la
 # Run 'go mod download' to resolve dependencies
 RUN go mod download
 
-# Build Gaia (disabling Ledger support)
+# Run 'make' command to compile Gaia (disabling Ledger support)
 RUN make LEDGER_ENABLED=false
+
+# Print the built binaries to verify if they were generated successfully
+RUN ls -la
 
 # Use a new stage for the runtime image
 FROM alpine:3.14
