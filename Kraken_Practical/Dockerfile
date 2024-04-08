@@ -1,30 +1,38 @@
-# Use a base image with necessary dependencies (Ubuntu in this case)
-FROM ubuntu:20.04
+# Use a minimal base image
+FROM golang:1.16-alpine AS builder
 
-# Set environment variables
-ENV GOPATH /go
-ENV PATH $GOPATH/bin:/usr/local/go/bin:$PATH
+# Set necessary environment variables
+ENV GO111MODULE=on \
+    CGO_ENABLED=0 \
+    GOOS=linux \
+    GOARCH=amd64
 
-# Install necessary dependencies
-RUN apt-get update && apt-get install -y \
-    wget \
-    git \
-    build-essential \
-    curl
+# Install Git
+RUN apk update && apk add --no-cache git
 
-# Install Go 1.20
-RUN wget https://golang.org/dl/go1.20.linux-amd64.tar.gz && \
-    tar -C /usr/local -xzf go1.20.linux-amd64.tar.gz
+# Set the working directory inside the container
+WORKDIR /app
 
-# Clone Gaia repository
-RUN git clone --branch v14.2.0 https://github.com/cosmos/gaia.git $GOPATH/src/github.com/cosmos/gaia
+# Clone the Gaia repository and checkout the desired version
+RUN git clone --branch v14.2.0 --depth 1 https://github.com/cosmos/gaia.git .
 
 # Build Gaia
-WORKDIR $GOPATH/src/github.com/cosmos/gaia
 RUN make install
 
-# Expose ports
-EXPOSE 26656 26657 26660
+# Use a new stage for the runtime image
+FROM alpine:3.14
 
-# Configure and start Gaia
-CMD ["gaiad", "start"]
+# Set timezone to UTC
+ENV TZ=UTC
+
+# Install ca-certificates to support HTTPS communications
+RUN apk update && apk add --no-cache ca-certificates
+
+# Copy the built Gaia binary from the builder stage
+COPY --from=builder /go/bin/gaia /usr/local/bin/gaia
+
+# Expose the necessary ports for the Gaia daemon
+EXPOSE 26656 26657 1317
+
+# Run the Gaia daemon and print its output to the console
+CMD ["gaia", "start", "--log_level", "info"]
