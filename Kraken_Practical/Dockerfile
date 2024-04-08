@@ -1,4 +1,4 @@
-# Use a minimal base image for building
+# Use a newer base image with Go version 1.20
 FROM golang:1.20-alpine AS builder
 
 # Set necessary environment variables
