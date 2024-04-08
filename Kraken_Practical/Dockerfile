@@ -8,7 +8,7 @@ ENV GO111MODULE=on \
     GOARCH=amd64
 
 # Install Git
-RUN apk update && apk add --no-cache git
+RUN apk update && apk add --no-cache git make
 
 # Set the working directory inside the container
 WORKDIR /app
