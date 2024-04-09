@@ -13,7 +13,12 @@ sed -i 's/persistent_peers = ""/persistent_peers = "6e08b23315a9f0e1b23c7ed84793
 
 # Configure State sync
 current_block_height=$(curl -s https://${PUBLIC_RPC}/status | jq -r .result.sync_info.latest_block_height)
-target_block_height=$((current_block_height - 100))
+target_block_height=$((current_block_height > 100 ? current_block_height -100:100))
+
+# If target_block_height is less than or equal to 0, set to 1
+if [ $target_block_height -le 0 ]; then
+    target_block_height=1
+fi
 
 # Fetch the block data for the target block height
 block_data=$(curl -s "https://${PUBLIC_RPC}/block?height=$target_block_height")
