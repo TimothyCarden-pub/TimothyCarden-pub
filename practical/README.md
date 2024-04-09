@@ -22,7 +22,7 @@ The Dockerfile provided builds a lightweight, secure container image based on Ub
 
 To build the container image, navigate to the directory containing the Dockerfile and run:
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   docker build -t yourrepo/gaia:v14.2.0 .   `
+`   docker build -t yourrepo/gaia:v14.2.0 .   `
 
 Replace yourrepo with your Docker Hub username or private repository.
 
@@ -30,7 +30,7 @@ Replace yourrepo with your Docker Hub username or private repository.
 
 Once the image is built, you can run the Gaia daemon with:
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   docker run --rm -it yourrepo/gaia:v14.2.0   `
+`   docker run --rm -it yourrepo/gaia:v14.2.0   `
 
 This command runs the Gaia daemon and prints its output to the console.
 
@@ -43,7 +43,7 @@ Included is a Kubernetes StatefulSet configuration designed for deploying the Ga
 
 Apply the Kubernetes configurations with:
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   kubectl apply -f statefulset.yaml   `
+`   kubectl apply -f statefulset.yaml   `
 
 This directory should contain the StatefulSet, Service, ConfigMap, and any other necessary Kubernetes resource files.
 
