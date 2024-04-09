@@ -17,7 +17,7 @@ target_block_height=$((current_block_height > 100 ? current_block_height -100:10
 
 # If target_block_height is less than or equal to 0, set to 1
 if [ $target_block_height -le 0 ]; then
-    target_block_height=1
+    target_block_height=32
 fi
 
 # Fetch the block data for the target block height
