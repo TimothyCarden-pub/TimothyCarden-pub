@@ -1,3 +1,5 @@
+# sourced from gaia 14.2.0 repository on github
+
 FROM golang:1.20-alpine AS gaiad-builder
 WORKDIR /src/app/
 ENV PACKAGES curl make git libc-dev bash gcc linux-headers eudev-dev python3 git
@@ -11,8 +13,8 @@ FROM ubuntu:latest
 COPY --from=gaiad-builder /go/bin/gaiad /usr/local/bin/
 EXPOSE 26656 26657 1317 9090
 USER 0
-COPY start.sh /root/start.sh
+COPY start.sh /src/app/start.sh
 RUN apt-get update && \
     apt-get install bash curl wget jq nano -y
 
-ENTRYPOINT bash /root/start.sh
+ENTRYPOINT bash /src/app/start.sh

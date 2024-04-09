@@ -1,0 +1,156 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: cosmos
+
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: gaiad-node
+  namespace: cosmos
+spec:
+  serviceName: "gaiad"
+  replicas: 1
+  selector:
+    matchLabels:
+      app: gaiad
+  template:
+    metadata:
+      labels:
+        app: gaiad
+    spec:
+      volumes:
+        - name: healthcheck-script
+          configMap:
+            name: gaiad-healthcheck
+            defaultMode: 0755
+      containers:
+      - name: gaiad
+        image: tcarden25/practical:14.2.0-latest
+        ports:
+        - containerPort: 26656
+          name: p2p
+        - containerPort: 26657
+          name: rpc
+        - containerPort: 1317
+          name: lite-client
+        - containerPort: 9090
+          name: grpc
+        env:
+        - name: PUBLIC_RPC
+          value: "cosmos-rpc.publicnode.com:443"
+        volumeMounts:
+        - name: gaiad-data
+          mountPath: /root/
+        - name: healthcheck-script
+          mountPath: /scripts
+        readinessProbe:
+          exec:
+            command: ["/bin/bash", "/scripts/healthcheck.sh"]
+          initialDelaySeconds: 30
+          periodSeconds: 60
+        livenessProbe:
+          exec:
+            command: ["/bin/bash", "/scripts/healthcheck.sh"]
+          initialDelaySeconds: 60
+          periodSeconds: 60
+        resources:
+          requests:
+            cpu: "4000m"
+            memory: "16Gi"
+          limits:
+            cpu: "4000m"
+            memory: "16Gi"
+  volumeClaimTemplates:
+  - metadata:
+      name: gaiad-data
+    spec:
+      accessModes: [ "ReadWriteOnce" ]
+      storageClassName: gp3
+      resources:
+        requests:
+          storage: 200Gi
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: gaiad
+  namespace: cosmos
+spec:
+  selector:
+    app: gaiad
+  ports:
+  - name: p2p
+    port: 26656
+    targetPort: 26656
+  - name: rpc
+    port: 26657
+    targetPort: 26657
+  - name: lite-client
+    port: 1317
+    targetPort: 1317
+  - name: grpc
+    port: 9090
+    targetPort: 9090
+  type: LoadBalancer
+
+
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: gaiad-healthcheck
+  namespace: cosmos
+data:
+  healthcheck.sh: |
+    #!/bin/bash
+
+    STATUS_URL="http://localhost:26657/status"
+
+    echo "Waiting for node to finish syncing..."
+    while true; do
+      SYNCING=$(curl -s $STATUS_URL | jq -r '.result.sync_info.catching_up')
+      if [[ "$SYNCING" == "false" ]]; then
+        echo "Node synced."
+        break
+      fi
+      sleep 10
+    done
+
+    while true; do
+      SYNCING=$(curl -s $STATUS_URL | jq -r '.result.sync_info.catching_up')
+      if [[ "$SYNCING" == "true" ]]; then
+        echo "Node is falling behind."
+        exit 1
+      fi
+      sleep 30
+    done
+
+---
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: gaiad-node-hpa
+  namespace: cosmos
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: StatefulSet
+    name: gaiad-node
+  minReplicas: 1
+  maxReplicas: 3  # Be cautious with scaling StatefulSets
+  metrics:
+    - type: Resource
+      resource:
+        name: cpu
+        target:
+          type: Utilization
+          averageUtilization: 80
+    - type: Resource
+      resource:
+        name: memory
+        target:
+          type: Utilization
+          averageUtilization: 80
