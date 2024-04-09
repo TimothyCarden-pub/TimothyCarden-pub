@@ -1,5 +1,8 @@
 gaiad init localnetwork
 
+# Set the URL of the RPC server
+PUBLIC_RPC="example.com:26657"
+
 cd /root/.gaia/
 # Prepare genesis file for cosmoshub-4
 wget https://github.com/cosmos/mainnet/raw/master/genesis/genesis.cosmoshub-4.json.gz
