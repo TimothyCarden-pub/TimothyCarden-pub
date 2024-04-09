@@ -1,4 +1,4 @@
-# sourced from gaia 14.2.0 repository on github
+# sourced from gaia 14.2.0 repository on github @ https://github.com/cosmos/gaia/blob/main/Dockerfile
 
 FROM golang:1.20-alpine AS gaiad-builder
 WORKDIR /src/app/
