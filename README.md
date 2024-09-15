@@ -25,15 +25,15 @@
 <!--START_SECTION:waka-->
 
 ```txt
-From: 26 October 2022 - To: 12 September 2024
+From: 26 October 2022 - To: 14 September 2024
 
-Total Time: 73 hrs 4 mins
+Total Time: 81 hrs 52 mins
 
-Lua          19 hrs 7 mins   >>>>>>>------------------   26.17 %
-Python       16 hrs 11 mins  >>>>>>-------------------   22.15 %
-YAML         14 hrs 58 mins  >>>>>--------------------   20.49 %
-Other        4 hrs 47 mins   >>-----------------------   06.56 %
-Docker       4 hrs 36 mins   >>-----------------------   06.30 %
+Lua          27 hrs 43 mins  >>>>>>>>-----------------   33.87 %
+Python       16 hrs 11 mins  >>>>>--------------------   19.77 %
+YAML         14 hrs 58 mins  >>>>>--------------------   18.29 %
+Other        4 hrs 50 mins   >------------------------   05.91 %
+Docker       4 hrs 36 mins   >------------------------   05.62 %
 ```
 
 <!--END_SECTION:waka-->
