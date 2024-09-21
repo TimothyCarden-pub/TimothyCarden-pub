@@ -4,13 +4,11 @@
 		<Name>Equipment Compare</Name>
 		<Author>Chubs</Author>
 		<Version>1.0.0</Version>
-		<Description>
-This is Equipment Compare Compare!
-
-Equipment Compare is designed to allow the user to drag and drop items into in order to get a more detailed comparison of items and how they will effect the base stats of your character.
+		<Description> This is Equipment Compare!
+Equipment Compare is designed to allow the user to drag and drop items in order to get a more detailed comparison and how they will effect the base stats of your character.
 Thank you
 		</Description>
-		<Image>ChubsPlugins/EquipmentCompare/Resources/MainIcon.tga</Image>
+		<Image>ChubsPlugins/EquipmentCompare/Resources/backpack.tga</Image>
 	</Information>
 	<Package>ChubsPlugins.EquipmentCompare.Main</Package>
 	<Configuration Apartment="EquipmentCompare" />

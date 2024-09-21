@@ -2,6 +2,7 @@
 -- import "Turbine.UI";
 -- import "Turbine.UI.Lotro";
 -- import "ChubsPlugins.EquipmentCompare.ECWindow"; -- Import ECWindow
+-- import "ChubsPlugins.EquipmentCompare.src.settings";
 
 -- ECButton = class(Turbine.UI.Window);
 
