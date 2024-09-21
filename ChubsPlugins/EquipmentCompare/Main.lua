@@ -5,9 +5,9 @@ import "Turbine.Gameplay";
 import "Turbine.UI";
 import "Turbine.UI.Lotro";
 
-function debugPrint(text) Turbine.Shell.WriteLine("<rgb=#OOFFFF>DEBUG:</rgb>" ..text);
+function DebugPrint(text) Turbine.Shell.WriteLine("<rgb=#OOFFFF>DEBUG:</rgb>" ..text);
 end
 
 -- Create and display the ECButton
-button = ECButton();
-button:SetVisible(true);
+Button = ECButton();
+Button:SetVisible(true);
