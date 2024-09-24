@@ -1,4 +1,4 @@
-Settings = {
+_G.Settings = {
   buttonRelativeX = 0.5,  -- 50% from left
   buttonRelativeY = 0.5,  -- 50% from top
   showButton = 1,         -- Show button initially

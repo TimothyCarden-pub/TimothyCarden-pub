@@ -73,7 +73,7 @@ function ECButton:Constructor()
             -- Stop moving the button
             isMoving = false;
 
-            -- Save the new relative position in settings
+            -- Save the new relative position in Settings
             local screenWidth = Turbine.UI.Display.GetWidth();
             local screenHeight = Turbine.UI.Display.GetHeight();
             local currentX, currentY = self:GetPosition();
