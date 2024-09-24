@@ -41,5 +41,8 @@
             "pattern": "**/SkinDefinition.xml",
             "systemId": "c:\\Users\\Timca\\.vscode\\extensions\\lunarwtr.lotro-api-1.0.16\\resources\\xsds\\lotro-skin.xsd"
         }
+    ],
+    "Lua.diagnostics.globals": [
+        "class"
     ]
 }

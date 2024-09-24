@@ -1,4 +1,4 @@
-import "ChubsPlugins.EquipmentCompare.Settings";
+import "ChubsPlugins.EquipmentCompare.src.settings";
 import "ChubsPlugins.EquipmentCompare.ECButton"; -- Import the ECButton class from the other file
 import "Turbine";
 import "Turbine.Gameplay";
